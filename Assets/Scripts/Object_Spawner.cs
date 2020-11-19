@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Object_Spawner : MonoBehaviour
 {
+    //Spawner de múltiplas entidades
+
     public GameObject Player;
     public GameObject[] coins;
     public GameObject [] enemy;
@@ -20,6 +22,7 @@ public class Object_Spawner : MonoBehaviour
 
     void Update()
     {
+        //Timer para spawn
         coinSpawnTimer -= Time.deltaTime;
         enemySpawnTimer -= Time.deltaTime;
         treeSpawnTimer -= Time.deltaTime;
@@ -46,6 +49,8 @@ public class Object_Spawner : MonoBehaviour
             SpawnPowerUp();
                         
     }
+
+    //Funções de spawn, onde os objetos são instanciados em um range aleatório em frente ao player, e o cenário também inclui uma rotação (Quaternion) aleatória
 
     void SpawnCoins () {
         Instantiate (coins[(Random.Range (0, coins.Length))], new Vector3 (Player.transform.position.x + 30, Random.Range(0, 7), 0), Quaternion.identity);

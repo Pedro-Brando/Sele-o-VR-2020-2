@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioFX : MonoBehaviour
 {
+    //Manager de Áudio do game
 
     public AudioClip death;
     public AudioClip magic;
@@ -11,7 +12,6 @@ public class AudioFX : MonoBehaviour
 	public AudioClip footStep;
     public AudioClip energy;
     public AudioClip speed;
-    //public AudioClip fireCast;
     private bool isAlive = true;
 
     public GameObject player;
@@ -42,6 +42,9 @@ public class AudioFX : MonoBehaviour
     }
 
     void OnTriggerEnter (Collider trig){
+
+        //Usar else if's provavelmente não é a forma mais eficiente de fazer isso.
+
         if ((trig.gameObject.tag == "Coin") && isAlive == true){
         GetComponent<AudioSource>().PlayOneShot (coin, 0.8f);
 

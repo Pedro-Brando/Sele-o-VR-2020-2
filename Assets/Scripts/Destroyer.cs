@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
+    //Script de autodestruição para não lotar a memória do game
     private float timeTilDestroy = 40.0f;
 
-    // Update is called once per frame
     void Update()
     {
         timeTilDestroy -= Time.deltaTime;

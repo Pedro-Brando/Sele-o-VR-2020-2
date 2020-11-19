@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Magic_Bar : MonoBehaviour
 {
+    //Barra de mana do Player
     void Update()
     {
         adjustMagicBar();

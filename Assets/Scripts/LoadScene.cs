@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
+    //Código para os botões de trocar cena e abrir tutorial
+
     public void LoadToScene (string sceneToLoad) {
         Initiate.Fade(sceneToLoad, Color.white, 1.0f);
-        //SceneManager.LoadScene (sceneToLoad);
     }
 
     public void QuitGame(){
         Application.Quit();
-        Debug.Log ("Quit Game!");
     }
 
     public void OpenTutorial(GameObject tutorialMenu){

@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class BG_Follow : MonoBehaviour
 {
+    //Script para prender o background a câmera, dando a ilusão de fundo infinito
 
     private GameObject cam;
-    // Start is called before the first frame update
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag ("MainCamera");
         
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Vector3 camPos = transform.position;

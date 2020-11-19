@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Camera_Follow : MonoBehaviour
 {
+    //Script para a câmera seguir o Player, com variação no eixo X e Y
     private GameObject player;
     public float cameraSpeed = 5.0f;
 

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {    
+    //Código para display do score, se o score atual for maior que o high score, o score atualiza
     public GameObject scoreUI;
     public GameObject highScoreUI;
     

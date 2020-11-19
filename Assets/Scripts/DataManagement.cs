@@ -7,6 +7,7 @@ using System.IO;
 
 public class DataManagement : MonoBehaviour
 {
+    //Armazenamento de score e high score do jogo
     public static DataManagement datamanagement;
     public int currentScore;
     public int highScore;

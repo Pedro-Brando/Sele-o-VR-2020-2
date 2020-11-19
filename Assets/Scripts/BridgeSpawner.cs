@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class BridgeSpawner : MonoBehaviour
 {
-
+    //Spawner para o prefab da ponte, spawnando infinitamente
     public GameObject bridge;
     private float bridgeSpawnTimer = 1.0f;
     private bool hasSpawned = false;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
+        //Timer para spawnar a próxima ponte, e impedir que a ponte que já criou sua próxima crie mais pontes
         bridgeSpawnTimer -= Time.deltaTime;
         if (bridgeSpawnTimer < 0.01 && GameInit.gameIsPlaying == true && hasSpawned == false) {
             SpawnBridge();

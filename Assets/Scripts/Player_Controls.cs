@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_Controls : MonoBehaviour
 {
+    //Controles do player, voar e bola de fogo
 
     public static float magicFuel = 1.5f;
     public float magicForce = 10.0f;
@@ -52,7 +53,11 @@ public class Player_Controls : MonoBehaviour
         magicFuel = Mathf.MoveTowards (magicFuel, 0, Time.fixedDeltaTime);
         GetComponent<Rigidbody> ().AddForce (new Vector3 (0, magicForce));
     }
+    
     void MatarInimigos() {
+        
+        //A bola de fogo cria um array com todos os inimigos e destrói eles
+        
         GameObject[] inimigos = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(GameObject enemy in inimigos)
         GameObject.Destroy(enemy);
@@ -60,10 +65,13 @@ public class Player_Controls : MonoBehaviour
     }
 
     void OnCollisionEnter (Collision Col){
+        
         if (Col.gameObject.tag == "Ground"){
+
             anim.ResetTrigger("JumpTrigger");
             anim.SetTrigger("IdleTrigger");
             magicFuel = 1.5f;
+
         }
     }
 }

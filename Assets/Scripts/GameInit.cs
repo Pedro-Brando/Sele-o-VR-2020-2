@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameInit : MonoBehaviour
 {
+    //Inicialização do jogo
     public static bool gameIsPlaying;
     void Start()
     {

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Player_Col : MonoBehaviour
 {
 
+    //Colisor do Player
+
     public GameObject RestartUI;
     public GameObject Trail;
     public GameObject fireBall;
@@ -63,6 +65,8 @@ void OnTriggerEnter(Collider trig){
 
 
 void PlayerDies () {
+    //Morte do Player
+    
     isAlive = false;
     GameInit.gameIsPlaying = false;
     anim.SetTrigger("DeathTrigger");
@@ -71,11 +75,14 @@ void PlayerDies () {
     Player_Move.playerSpeed = 10;
     Trail.gameObject.SetActive (false);
     hasFireball = false;
+    
     //se eu quiser deletar o player:
     //GetComponent<Rigidbody>().isKinematic = true;
     //GetComponent<MeshRenderer>().enabled = false
+    
     GetComponent<Player_Controls>().enabled = false;
     GetComponent<Player_Move>().enabled = false;
+    
     magic.Stop();
 }
 

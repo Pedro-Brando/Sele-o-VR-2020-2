@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
+
+    //Script que movimenta o player para frente
     public static int playerSpeed = 10;
 
     void FixedUpdate()
