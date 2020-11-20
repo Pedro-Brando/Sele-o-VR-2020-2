@@ -6,7 +6,7 @@ public class BridgeSpawner : MonoBehaviour
 {
     //Spawner para o prefab da ponte, spawnando infinitamente
     public GameObject bridge;
-    private float bridgeSpawnTimer = 1.0f;
+    private float bridgeSpawnTimer = 1.7f;
     private bool hasSpawned = false;
     void Start()
     {
@@ -25,6 +25,6 @@ public class BridgeSpawner : MonoBehaviour
 
     void SpawnBridge () {
         Instantiate (bridge, new Vector3 (bridge.transform.position.x + 23.14f, bridge.transform.position.y, bridge.transform.position.z), Quaternion.identity);
-        bridgeSpawnTimer = 1.0f;
+        bridgeSpawnTimer = 1.7f;
     }
 }
